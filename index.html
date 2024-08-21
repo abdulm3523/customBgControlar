@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKGROUND CONTROLL</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section class="main-wrapper"> 
+        <div class="container">
+            <!-- BACKGROUND CONTROLL SECTION -->
+            <div class="background__controll_section">
+                <!-- BACKGROUND ARRRIBUTE & FILE UPLOAD ARE -->
+                <div class="backgroundControll__attribute_area">
+                    <div class="upload__filed">
+                        <input type="file" name="" id="imageUpload" accept="image/png, image/jpeg,image/jpg,image/svg">
+                        <i class="bi bi-cloud-arrow-up"></i>
+                    </div>
+                    <div id="progress_bar"></div>
+
+                    <h2>Controll Backgorund</h2>
+                    <div class="attributes">
+
+                         <!-- Background Size -->
+                         <label for="background-size">Background Size</label>
+                         <select name="" id="background-size">
+                             <option value="" selected data-cssAttr="auto">auto</option>
+                             <option value="" selected data-cssAttr="cover">cover</option>
+                             <option value="" selected data-cssAttr="contain">contain</option>
+                         </select>
+
+                        <!-- Background Position -->
+                        <label for="background-position">Background Position</label>
+                        <select name="" id="background-position">
+                            <option value="" selected data-cssAttr="center center">center center</option>
+                            <option value="" data-cssAttr="left top">left top</option>
+                            <option value="" data-cssAttr="left bottom">left bottom</option>
+                            <option value="" data-cssAttr="left center">left center</option>
+                            <option value="" data-cssAttr="right top">right top</option>
+                            <option value="" data-cssAttr="right center">right center</option>
+                            <option value="" data-cssAttr="right bottom">right bottom</option>
+                            <option value="" data-cssAttr="center top">center top</option>
+                            <option value="" data-cssAttr="center bottom">center bottom</option>
+                        </select>
+
+                        <!-- Background Repeat -->
+                        <label for="background-repeat">Background Repeat</label>
+                        <select name="" id="background-repeat">
+                            <option value="" selected data-cssAttr="no-repeat">no repeat</option>
+                            <option value="" selected data-cssAttr="repeat">repeat</option>
+                            <option value="" selected data-cssAttr="repeat-x">repeat-x</option>
+                            <option value="" selected data-cssAttr="repeat-y">repeat-y</option>
+                            <option value="" selected data-cssAttr="initial">initial</option>
+                            <option value="" selected data-cssAttr="inherit">inherit</option>
+                        </select>
+                        <!-- Background Attachment -->
+                        <label for="background-attachmen">Background Attachment</label>
+                        <select name="" id="background-attachment">
+                            <option value="" selected data-cssAttr="initial">initial</option>
+                            <option value="" selected data-cssAttr="fixed">fixed</option>
+                            <option value="" selected data-cssAttr="scroll">scroll</option>
+                            <option value="" selected data-cssAttr="local">local</option>
+                            <option value="" selected data-cssAttr="inherit">inherit</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- BACKGROUND PREVIEW AREA-->
+                <div class="background__preview__area" id="bg_preview">
+
+                </div>
+            </div>
+
+            <!-- BACKGROUND CSS ATTRIBUTES PREVIEW -->
+            <div class="background__control_cssAttributes">
+                <h2>Css code</h2>
+                <div class="cssCode_values">
+                    <li id="CssattrValue"><span>background-attachment</span>: initial</li>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <div class="left">
+                <h2>Open Source</h2>
+                <p>Developed by <span>Abdulmalik</span> </p>
+            </div>
+            <a href="https://github.com/abdulm3523/colorPickerApplication.git" class="openSource"><i class="bi bi-github"></i>View Souce</a>
+        </div>
+        
+    </footer>
+</body>
+</html>
