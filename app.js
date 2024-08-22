@@ -21,10 +21,38 @@ function main(){
 
     // FILE UPLOAD EVENT
     fileUpload.addEventListener('change', function (e) {
-        let file1Size = e.target.files[0].name;
+        const imagePath = e.target.files[0];
         // console.log(file1Size)
-        bgPreview.style.background = `url(assest/img/${file1Size})`
-        file1Size = null
+        const imgUrl = URL.createObjectURL(imagePath)
+        console.log(imgUrl)
+        bgPreview.style.background = `url(${imgUrl})`
+
+        // PASSING IMAGE URL TO DISPLAY CSS CODE
+        cssCodePreview(imgUrl)
+
+        // PROGRESSBAR
+        const progressBar = document.getElementById('progressbar');
+        progressBar.style.display = 'block';
+    
+        const reader = new FileReader();
+    
+        reader.onprogress = function(event) {
+            if (event.lengthComputable) {
+                const percentLoaded = Math.round((event.loaded / event.total) * 100);
+                document.getElementById('progress_label').innerHTML = `${percentLoaded}%`
+                // document.getElementById('progress_label').style.transform = `translateX(${percentLoaded}%,${percentLoaded - 50}%)`
+                progressBar.value = percentLoaded;
+            }
+        };
+    
+        reader.onloadend = function() {
+            progressBar.value = 100;
+            setTimeout(function(){
+                progressBar.style.display = 'none';
+            },400)
+        };
+    
+        reader.readAsDataURL(imagePath);
         
     });  
 
@@ -56,17 +84,21 @@ function copyCssCodeBtnHendaler(){
 }
 
 // TAKING CSS ELEMENTS TO DISPLAY CSS CODE BOX
-function cssCodePreview(){
+function cssCodePreview(imgUrl){
     let bgSize = `background-size:${document.getElementById('background-size').value}`
     let bgPosition = `background-position:${document.getElementById('background-position').value}`
     let bgRepeat = `background-repeat:${document.getElementById('background-repeat').value}`
     let bgAttachment = `background-attachment:${document.getElementById('background-attachment').value}`
+    
     let cssCustomCode = `
-    ${document.getElementById('CssattrValue1').innerHTML =bgSize };
-    ${document.getElementById('CssattrValue2').innerHTML = bgPosition};
-    ${document.getElementById('CssattrValue3').innerHTML = bgRepeat};
-    ${document.getElementById('CssattrValue4').innerHTML =bgAttachment};
+    ${document.getElementById('CssattrValue1').innerHTML = `background: url(${imgUrl})`};
+    ${document.getElementById('CssattrValue2').innerHTML = bgSize };
+    ${document.getElementById('CssattrValue3').innerHTML = bgPosition};
+    ${document.getElementById('CssattrValue4').innerHTML = bgRepeat};
+    ${document.getElementById('CssattrValue5').innerHTML =bgAttachment};
     `
-  return cssCustomCode
+    fileUpload.value = null
+
+    return cssCustomCode
 }
 
