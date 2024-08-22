@@ -31,7 +31,8 @@
         flex-basis: 35%;
         flex-flow: 1;
         flex-grow: 1;
-        padding-right: 20px; }
+        padding-right: 20px;
+        position: relative; }
         .main-wrapper .container .background__controll_section .backgroundControll__attribute_area .upload__filed {
           width: 100%;
           border: 1.5px dashed #0064e0;
@@ -39,15 +40,34 @@
           min-height: 120px;
           display: flex;
           justify-content: center;
-          align-items: center;
-          margin-bottom: 20px; }
+          align-items: center; }
           .main-wrapper .container .background__controll_section .backgroundControll__attribute_area .upload__filed input {
             visibility: hidden;
             display: none; }
           .main-wrapper .container .background__controll_section .backgroundControll__attribute_area .upload__filed i {
             font-size: 1.9rem;
             opacity: 0.6; }
+        .main-wrapper .container .background__controll_section .backgroundControll__attribute_area .progress__bar {
+          margin-top: 5px;
+          width: 80%;
+          background: #0064e0;
+          height: 15px;
+          border-radius: 50px;
+          transition: 0.2s all ease-out;
+          display: none;
+          text-align: center;
+          position: absolute;
+          top: 90px;
+          left: 7%; }
+          .main-wrapper .container .background__controll_section .backgroundControll__attribute_area .progress__bar span {
+            display: block;
+            position: relative;
+            font-size: 0.7rem;
+            text-align: center;
+            color: #fff;
+            transition: 0.2s all ease-out; }
         .main-wrapper .container .background__controll_section .backgroundControll__attribute_area h2 {
+          margin-top: 10px;
           font-size: 1.5rem;
           margin-bottom: 10px; }
         .main-wrapper .container .background__controll_section .backgroundControll__attribute_area .attributes {
@@ -69,6 +89,7 @@
         width: 100%;
         flex-basis: 65%;
         min-height: 320px;
+        max-height: 320px;
         flex-flow: 1;
         flex-grow: 1;
         box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.1);
