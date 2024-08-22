@@ -6,7 +6,8 @@
     <title>BACKGROUND CONTROLL</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assest/style.minify.css">
+    <!-- <link rel="stylesheet" href="main.css"> -->
 </head>
 <body>
     <section class="main-wrapper"> 
@@ -17,10 +18,10 @@
                 <div class="backgroundControll__attribute_area">
                     <label class="upload__filed" for="imageUpload">
                         <i class="bi bi-cloud-arrow-up"></i>
-                        <input type="file" name="" id="imageUpload" accept="image/png, image/jpeg,image/jpg,image/svg">
+                        <input type="file" name="" id="imageUpload" accept="image/png, image/jpeg,image/jpg,image/svg,image/avif,image/webp">
                         
                     </label>
-
+                    <div id="progressbar" class="progress__bar" value="0" max="100"><span id="progress_label"></span></div>
                     <h2>Controll Backgorund</h2>
                     <div class="attributes" id="attributes">
 
@@ -94,6 +95,7 @@
                     <li id="CssattrValue2"></li>
                     <li id="CssattrValue3"></li>
                     <li id="CssattrValue4"></li>
+                    <li id="CssattrValue5"></li>
                 </div>
             </div>
         </div>
@@ -110,6 +112,7 @@
         </div>
         
     </footer>
-    <script src="app.js"></script>
+    <script src="assest/app.minify.js"></script>
+     <!-- <script src="app.js"></script> -->
 </body>
 </html>
