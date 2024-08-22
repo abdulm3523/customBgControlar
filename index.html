@@ -15,56 +15,68 @@
             <div class="background__controll_section">
                 <!-- BACKGROUND ARRRIBUTE & FILE UPLOAD ARE -->
                 <div class="backgroundControll__attribute_area">
-                    <div class="upload__filed">
-                        <input type="file" name="" id="imageUpload" accept="image/png, image/jpeg,image/jpg,image/svg">
+                    <label class="upload__filed" for="imageUpload">
                         <i class="bi bi-cloud-arrow-up"></i>
-                    </div>
-                    <div id="progress_bar"></div>
+                        <input type="file" name="" id="imageUpload" accept="image/png, image/jpeg,image/jpg,image/svg">
+                        
+                    </label>
+                    <div id="progress_bar" class="progress_bar" aria-valuemax="100"></div>
 
                     <h2>Controll Backgorund</h2>
-                    <div class="attributes">
+                    <div class="attributes" id="attributes">
 
-                         <!-- Background Size -->
-                         <label for="background-size">Background Size</label>
-                         <select name="" id="background-size">
-                             <option value="" selected data-cssAttr="auto">auto</option>
-                             <option value="" selected data-cssAttr="cover">cover</option>
-                             <option value="" selected data-cssAttr="contain">contain</option>
-                         </select>
+                        <div class="items">
+                            <!-- Background Size -->
+                            <label for="background-size">Background Size</label>
+                            <select value="background-size" id="background-size">
+                                <option value="auto">auto</option>
+                                <option selected value="cover">cover</option>
+                                <option value="contain">contain</option>
+                            </select>
+                        </div>
 
-                        <!-- Background Position -->
-                        <label for="background-position">Background Position</label>
-                        <select name="" id="background-position">
-                            <option value="" selected data-cssAttr="center center">center center</option>
-                            <option value="" data-cssAttr="left top">left top</option>
-                            <option value="" data-cssAttr="left bottom">left bottom</option>
-                            <option value="" data-cssAttr="left center">left center</option>
-                            <option value="" data-cssAttr="right top">right top</option>
-                            <option value="" data-cssAttr="right center">right center</option>
-                            <option value="" data-cssAttr="right bottom">right bottom</option>
-                            <option value="" data-cssAttr="center top">center top</option>
-                            <option value="" data-cssAttr="center bottom">center bottom</option>
-                        </select>
+                        <div class="items">
+                            <!-- Background Position -->
+                            <label for="background-position">Background Position</label>
+                            <select value="background-position" id="background-position">
+                                <option  selected value="center center">center center</option>
+                                <option  value="left top">left top</option>
+                                <option  value="left bottom">left bottom</option>
+                                <option  value="left center">left center</option>
+                                <option  value="right top">right top</option>
+                                <option  value="right center">right center</option>
+                                <option  value="right bottom">right bottom</option>
+                                <option  value="center top">center top</option>
+                                <option  value="center bottom">center bottom</option>
+                            </select>
+                        </div>
 
-                        <!-- Background Repeat -->
-                        <label for="background-repeat">Background Repeat</label>
-                        <select name="" id="background-repeat">
-                            <option value="" selected data-cssAttr="no-repeat">no repeat</option>
-                            <option value="" selected data-cssAttr="repeat">repeat</option>
-                            <option value="" selected data-cssAttr="repeat-x">repeat-x</option>
-                            <option value="" selected data-cssAttr="repeat-y">repeat-y</option>
-                            <option value="" selected data-cssAttr="initial">initial</option>
-                            <option value="" selected data-cssAttr="inherit">inherit</option>
-                        </select>
-                        <!-- Background Attachment -->
-                        <label for="background-attachmen">Background Attachment</label>
-                        <select name="" id="background-attachment">
-                            <option value="" selected data-cssAttr="initial">initial</option>
-                            <option value="" selected data-cssAttr="fixed">fixed</option>
-                            <option value="" selected data-cssAttr="scroll">scroll</option>
-                            <option value="" selected data-cssAttr="local">local</option>
-                            <option value="" selected data-cssAttr="inherit">inherit</option>
-                        </select>
+                        <div class="items">
+                            <!-- Background Repeat -->
+                            <label for="background-repeat">Background Repeat</label>
+                            <select value="background-repeat" id="background-repeat">
+                                <option  selected value="no-repeat">no repeat</option>
+                                <option   value="repeat">repeat</option>
+                                <option  value="repeat-x">repeat-x</option>
+                                <option   value="repeat-y">repeat-y</option>
+                                <option   value="initial">initial</option>
+                                <option   value="inherit">inherit</option>
+                            </select>
+                        </div>
+
+                        <div class="items">
+                            <!-- Background Attachment -->
+                            <label for="background-attachmen">Background Attachment</label>
+                            <select value="background-attachment" id="background-attachment">
+                                <option selected value="initial">initial</option>
+                                <option  value="fixed">fixed</option>
+                                <option value="scroll">scroll</option>
+                                <option value="local">local</option>
+                                <option value="inherit">inherit</option>
+                            </select>
+                        </div>
+                        
+                        
                     </div>
                 </div>
 
@@ -77,8 +89,12 @@
             <!-- BACKGROUND CSS ATTRIBUTES PREVIEW -->
             <div class="background__control_cssAttributes">
                 <h2>Css code</h2>
-                <div class="cssCode_values">
-                    <li id="CssattrValue"><span>background-attachment</span>: initial</li>
+                <button id="copyCssCode"><i class="bi bi-copy"></i></button>
+                <div class="cssCode_values" id="cssCode__values">
+                    <li id="CssattrValue1"></li>
+                    <li id="CssattrValue2"></li>
+                    <li id="CssattrValue3"></li>
+                    <li id="CssattrValue4"></li>
                 </div>
             </div>
         </div>
@@ -95,5 +111,6 @@
         </div>
         
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
