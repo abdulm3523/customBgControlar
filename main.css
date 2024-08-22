@@ -24,7 +24,8 @@
     border-radius: 14px; }
     .main-wrapper .container .background__controll_section {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      flex-wrap: wrap; }
       .main-wrapper .container .background__controll_section .backgroundControll__attribute_area {
         width: 100%;
         flex-basis: 35%;
@@ -145,7 +146,25 @@ footer {
       footer .container a i {
         margin-right: 10px; }
 
+@media (max-width: 770px) {
+  h2 {
+    font-size: 1.1rem !important; }
+
+  .background__controll_section .backgroundControll__attribute_area {
+    padding-right: 0px !important; }
+  .background__controll_section label {
+    font-size: 0.9rem !important; }
+
+  .background__preview__area {
+    width: 100%;
+    flex-basis: 100% !important;
+    order: -1 !important;
+    min-height: 280px !important;
+    margin-bottom: 20px; } }
 @media (max-width: 560px) {
+  h2 {
+    font-size: 1.1rem !important; }
+
   footer .container {
     padding: 15px !important; }
     footer .container h2 {
