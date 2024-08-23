@@ -25,5 +25,10 @@ Upload Image: Click the upload area to select an image from your device.
 Customize Background: Use the dropdowns to adjust the background size, position, repeat, and attachment.
 Copy CSS Code: Click the copy icon to easily copy the generated CSS code for your background image settings.
 
+# Technologies Used
+𝗛𝗧𝗠𝗟: For the structure of the web page.
+𝗖𝗦𝗦: For styling the application.
+𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁: For handling the logic and DOM manipulation.
+
 # Credits
 Developed by Abdulmalik.
